@@ -1,21 +1,23 @@
-<p id="notice"><%= notice %></p>
-  <div class="show">
-    <p>
-      <strong>タイトル</strong>
-      <%= @calendar.title %>
-    </p>
-    
-    <p>
-      <strong>内容</strong>
-      <%= @calendar.content %>
-    </p>
-    
-    <p>
-      <strong>日時</strong>
-      <%= @calendar.start_time.strftime("%m-%d") %>
-    </p>
-    
-    <%= link_to '編集', edit_calendar_path(@calendar) %>
-    <%= link_to '削除',calendar_path(@calendar.id), method: :delete, data: { confirm: '削除しますか?' } %>
-    <%= link_to '戻る', calendars_path %>
+<div class= "container">
+  <p id="notice"><%= notice %></p>
+    <div class="show">
+      <p>
+        <strong>タイトル</strong>
+        <%= @calendar.title %>
+      </p>
+      
+      <p>
+        <strong>内容</strong>
+        <%= @calendar.content %>
+      </p>
+      
+      <p>
+        <strong>日時</strong>
+        <%= @calendar.start_time.strftime("%m-%d") %>
+      </p>
+      
+      <%= link_to '編集', edit_calendar_path(@calendar) %>
+      <%= link_to '削除',calendar_path(@calendar.id), method: :delete, data: { confirm: '削除しますか?' } %>
+      <%= link_to '戻る', calendars_path %>
+    </div>
   </div>

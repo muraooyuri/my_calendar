@@ -14,3 +14,13 @@
  *= require_tree .
  *= require_self
  */
+
+.box1 {
+  background: linear-gradient(#75F2C8, #75F2C8);
+  background: -moz-linear-gradient(#B8FCE0, #B8FCE0);
+  background: -webkit-linear-gradient(#D5F2C8, #D5F2C8);
+}
+
+.box2 {
+  text-align: center;
+}

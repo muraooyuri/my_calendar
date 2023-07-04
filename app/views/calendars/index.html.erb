@@ -1,12 +1,20 @@
 <p id="notice"><%= notice %></p>
-
-<div class="toppage">
-  <h1 class="top">カレンダー</h1>
-  <br>
-  
+  <div class="box1">
+    <div class="toppage">
+      <ul class="navbar-nav ml-auto">
+        <div class="box2">
+          <h1 class="top">カレンダー</h1>
+        </div>
+        <br>
+      </ul>
+      </div>
+    </div>
+  </div>
     <div class="row">
       <div class="col-md-4">
-        <div class="schedule">Myスケジュール</div>
+        <ul class="navbar-nav ml-auto">
+          <h3 class="schedule">＜Myスケジュール＞</h3>
+        </ul>
           <table class="table">
             <thead class="thead-light">
               <tr>
@@ -14,7 +22,7 @@
                 <th>日程</th>
               </tr>
             </thead>
-            
+
             <tbody>
               <% @calendars.each do |calendar| %>
                 <tr>
@@ -42,19 +50,18 @@
           </div>
         <% end %>
       </div>
-      
+
       <br>
-        <br>
-          <div class="col-md-8">
-            <%= month_calendar events: @calendars do |date, calendars| %>
-              <%= date.day %>
-              
-              <% calendars.each do |calendar| %>
-                  <div>
-                    <%= link_to calendar.title, calendar %>
-                  </div>
-              <% end %>
+      <br>
+        <div class="col-md-8">
+          <%= month_calendar events: @calendars do |date, calendars| %>
+            <%= date.day %>
+
+            <% calendars.each do |calendar| %>
+              <div>
+                <%= link_to calendar.title, calendar %>
+              </div>
             <% end %>
-          </div>
-      </div>
-</div>
+          <% end %>
+        </div>
+    </div>
