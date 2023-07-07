@@ -1,10 +1,10 @@
 class CalendarsController < ApplicationController
-  
+
   def index
     @calendars = Calendar.all
     @calendar = Calendar.new
   end
-  
+
   def new
     @calendar = Calendar.new
   end
@@ -16,12 +16,6 @@ class CalendarsController < ApplicationController
   def create
     Calendar.create(calendar_parameter)
     redirect_to calendars_path
-  end
-
-  def destroy
-    @calendar = Calendar.find(params[:id])
-    @calendar.destroy
-    redirect_to calendars_path, notice:"削除しました"
   end
 
   def edit
